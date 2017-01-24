@@ -1,0 +1,8 @@
+﻿.btn-close {
+    color: #aaa;
+    font-size: 30px;
+    text-decoration: none;
+    position: absolute;
+    right: 5px;
+    top: 0;
+}
