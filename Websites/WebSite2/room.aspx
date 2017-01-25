@@ -72,7 +72,7 @@
                 </a>
                 <h3 class="text-primary">Presidential suite</h3>
                 <p>Anthing</p>
-                    <a href="roomPresidential1.aspx" class="btn btn-warning shake">Check More!</a>
+                    <a href="roomPresidential1.aspx" class="btn btn-warning shake-little">Check More!</a>
                 </div>
             </div> 
         </div>
@@ -84,7 +84,7 @@
                 </a>
                 <h3 class="text-primary">Luxury suite</h3>
                 <p>Anthing</p>
-                    <a href="roomLuxury1.aspx"class="btn btn-warning shake">Check More!</a>
+                    <a href="roomLuxury1.aspx"class="btn btn-warning shake-little">Check More!</a>
                 </div>
             </div> 
         </div>
@@ -96,7 +96,7 @@
                 </a>
                 <h3 class="text-primary">Standard suite</h3>
                 <p>Anthing</p>
-                    <a href="roomStandard1.aspx" class="btn btn-warning shake">Check More!</a>
+                    <a href="roomStandard1.aspx" class="btn btn-warning shake-little">Check More!</a>
                 </div>
             </div> 
         </div>
@@ -108,7 +108,7 @@
                 </a>
                 <h3 class="text-primary">Presidential suite</h3>
                 <p>Anthing</p>
-                    <a href="roomPresidential2.aspx" class="btn btn-warning shake">Check More!</a>
+                    <a href="roomPresidential2.aspx" class="btn btn-warning shake-little">Check More!</a>
                 </div>
             </div> 
         </div>
@@ -120,7 +120,7 @@
                 </a>
                 <h3 class="text-primary">Luxury suite</h3>
                 <p>Anthing</p>
-                    <a href="roomLuxury2.aspx" class="btn btn-warning shake">Check More!</a>
+                    <a href="roomLuxury2.aspx" class="btn btn-warning shake-little">Check More!</a>
                 </div>
             </div> 
         </div>
@@ -132,7 +132,7 @@
                 </a>
                 <h3 class="text-primary">Standard suite</h3>
                 <p>Anthing</p>
-                    <a href="roomStandard2.aspx" class="btn btn-warning shake">Check More!</a>
+                    <a href="roomStandard2.aspx" class="btn btn-warning shake-little">Check More!</a>
                 </div>
             </div> 
         </div>

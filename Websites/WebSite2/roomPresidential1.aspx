@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="js/mainContentjs.js"></script>
     <title>Presidential suite</title>
 </head>
 <body>
@@ -98,31 +99,7 @@
             </div>
                 </div>
         </div>
-        
-
-  <!-- Modal Content -->
-        <%--<div class="modal" id="modal-one" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-header">
-      <h2>Book this room now!</h2>
-      <a href="#" class="btn-close" aria-hidden="true">×</a>
-    </div>
-    <div class="modal-body">
-      <label><b>Username</b></label>
-      <asp:TextBox ID="TextBox1" runat="server" Text="Username"></asp:TextBox>
-
-      <label><b>Password</b></label>
-      <asp:TextBox ID="TextBox2" runat="server" Text="Username"></asp:TextBox>
-
-      
-    </div>
-    <div class="modal-footer">
-      <button type="submit">Login</button>
-    </div>
-  </div>
-</div>--%>
-
-
+       
   <!-- Modal -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog">
@@ -134,16 +111,31 @@
           <h4 class="modal-title">Book this room now!</h4>
         </div>
         <div class="modal-body">
-        <asp:Label ID="Label1" runat="server" Text="Email"></asp:Label>      
-        <asp:TextBox ID="TextBox1" runat="server" Text="Email"></asp:TextBox>
-
-      <asp:Label ID="Label2" runat="server" Text="Check-in date"></asp:Label>
-      <asp:TextBox ID="TextBox2" runat="server" Text="Check-in date"></asp:TextBox>
-            <asp:Label ID="Label3" runat="server" Text="Check-out date"></asp:Label>
-      <asp:TextBox ID="TextBox3" runat="server" Text="Check-out date"></asp:TextBox>
+            <div class="form-horizontal">
+                <div class="form-group">
+                            <asp:Label ID="Label1" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
+                            <div class="col-lg-10">
+                                 <asp:TextBox ID="TextBox1" runat="server" placeholder="Email address" CssClass="form-control"></asp:TextBox>
+                            </div>
+                        </div>
+                <div class="form-group">
+                    <asp:Label ID="Label2" runat="server" Text="Check-in date" CssClass="col-lg-2 control-label"></asp:Label>
+                    <div class="col-lg-10">
+                        <asp:TextBox ID="TextBox2" runat="server" placeholder="Check-in date" CssClass="form-control"></asp:TextBox>
+                        <a href="#"><span class="glyphicon glyphicon-calendar"></span></a>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <asp:Label ID="Label3" runat="server" Text="Check-out date" CssClass="col-lg-2 control-label"></asp:Label>
+                <div class="col-lg-10">
+                    <asp:TextBox ID="TextBox3" runat="server" placeholder="Check-out date" CssClass="form-control"></asp:TextBox>
+                </div>
+            </div>
+            </div>
         </div>
+
         <div class="modal-footer">
-            <asp:Button ID="Button1" runat="server" Text="Submit" />
+            <asp:Button ID="Button1" runat="server" Text="Submit" cssClass="btn btn-default"/>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
