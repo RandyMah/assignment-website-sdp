@@ -5,15 +5,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Registration</title>
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="css/mainContent.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/Jquery.js"></script>
+    <script src="js/mainContentjs.js"></script>
 </head>
 <body>
    
@@ -39,9 +38,6 @@
                     <li>
                         <a href="Loginpage.aspx">Login</a>
                     </li>
-                    <li>
-                        <a href="StaffLoginpage.aspx">Staff Login</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -66,26 +62,44 @@
                     <fieldset>
                         <legend>Registration Details</legend>
                         <div class="form-group">
-                            <asp:Label ID="Label1" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
+                            <asp:Label ID="lblEmail" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="TextBox1" runat="server" placeholder="Email" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="Label2" runat="server" Text="Password" CssClass="col-lg-2 control-label"></asp:Label>
+                            <asp:Label ID="lblPassword" runat="server" Text="Password" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="TextBox2" runat="server" placeholder="Password" CssClass="form-control"
+                                <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" CssClass="form-control"
                                     TextMode="Password"></asp:TextBox>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <asp:Label ID="Label3" runat="server" Text="Address" CssClass="col-lg-2 control-label"></asp:Label>
+                         <div class="form-group">
+                            <asp:Label ID="lblName" runat="server" Text="Name" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="TextBox3" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtName" runat="server" placeholder="Name" CssClass="form-control"></asp:TextBox>
+                            </div>
+                        </div>
+                         <div class="form-group">
+                            <asp:Label ID="lblICnumber" runat="server" Text="I.C Number" CssClass="col-lg-2 control-label"></asp:Label>
+                            <div class="col-lg-10">
+                                <asp:TextBox ID="txtICnumber" runat="server" placeholder="I.C Number" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
-                            <asp:Label ID="Label4" runat="server" Text="Gender" CssClass="col-lg-2 control-label"></asp:Label>
+                            <asp:Label ID="lblAddress" runat="server" Text="Address" CssClass="col-lg-2 control-label"></asp:Label>
+                            <div class="col-lg-10">
+                                <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="Label1" runat="server" Text="Contact Number" CssClass="col-lg-2 control-label"></asp:Label>
+                            <div class="col-lg-10">
+                                <asp:TextBox ID="txtContact" runat="server" placeholder="011-1234567" CssClass="form-control"></asp:TextBox>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <asp:Label ID="lblGender" runat="server" Text="Gender" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
                                 <div class="radio">
                                     <label>
@@ -95,16 +109,6 @@
                                         </asp:RadioButtonList>
                                     </label>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                          <asp:Label ID="Label5" runat="server" Text="Country" CssClass="col-lg-2 control-label"></asp:Label>                          
-                            <div class="col-lg-10">
-                                <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control ddl">
-                                    <asp:ListItem>Malaysia</asp:ListItem>
-                                    <asp:ListItem>Singapore</asp:ListItem>
-                                    <asp:ListItem>Thailand</asp:ListItem>
-                                </asp:DropDownList>                              
                             </div>
                         </div>
                         <div class="form-group">

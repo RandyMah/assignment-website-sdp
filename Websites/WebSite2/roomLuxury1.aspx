@@ -4,16 +4,15 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <link href="css/bootstrap.css" rel="stylesheet" />
-    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <title>Luxury suite</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link href="css/mainContent.css" rel="stylesheet" />
-    <link href="css/font-awesome.min.css" rel="stylesheet" />
     <link href="css/font-awesome.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="js/Jquery.js"></script>
-    <title>Luxury suite</title>
+    <script src="js/mainContentjs.js"></script>
 </head>
 <body>
     <form id="form1" runat="server">
@@ -38,9 +37,6 @@
                     </li>
                     <li>
                         <a href="Loginpage.aspx">Login</a>
-                    </li>
-                    <li>
-                        <a href="StaffLoginpage.aspx">Staff Login</a>
                     </li>
                 </ul>
             </div>
