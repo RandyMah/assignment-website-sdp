@@ -79,6 +79,7 @@
                             <asp:Label ID="Label4" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
                                  <asp:TextBox ID="TxtEmail" runat="server" placeholder="Email address" CssClass="form-control"></asp:TextBox>
+                                <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is a required field." ForeColor="Red"></asp:RequiredFieldValidator>
                             </div>
                         </div>
                     <div class="form-group">
