@@ -23,7 +23,7 @@
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu-collapse">
                     <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars" aria-hidden="true"></i>
                 </button>
-                <a class="navbar-brand" href="Mainpage.aspx">Hotel China Town Inn</a>
+                <a class="navbar-brand" href="../Mainpage.aspx">Hotel China Town Inn</a>
             </div>
             <div class="collapse navbar-collapse" id="menu-collapse">
                 <ul class="navbar-nav nav navbar-right">
@@ -31,13 +31,13 @@
                         <a href="room.aspx">Rooms</a>
                     </li>
                     <li>
-                        <a href="#mainAbout">About us</a>
+                        <a href="../Mainpage.aspx">About us</a>
                     </li>
                     <li>
-                        <a href="Registerpage.aspx">Register</a>
+                        <a href="../Registerpage.aspx">Register</a>
                     </li>
                     <li>
-                        <a href="Loginpage.aspx">Login</a>
+                        <a href="../Loginpage.aspx">Login</a>
                     </li>
                 </ul>
             </div>

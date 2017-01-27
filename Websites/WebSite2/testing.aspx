@@ -13,7 +13,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="js/mainContent.js"></script>
     <link href="css/jquery.datetimepicker.css" rel="stylesheet" />
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.datetimepicker.full.min.js"></script>
@@ -56,10 +55,10 @@
             <div class="collapse navbar-collapse" id="menu-collapse">
                 <ul class="navbar-nav nav navbar-right">
                     <li>
-                        <a href="room.aspx">Rooms</a>
+                        <a href="Rooms/room.aspx">Rooms</a>
                     </li>
                     <li>
-                        <a href="#mainAbout">About us</a>
+                        <a href="Mainpage.aspx">About us</a>
                     </li>
                     <li>
                         <a href="Registerpage.aspx">Register</a>
@@ -82,16 +81,32 @@
                                  <asp:TextBox ID="TxtEmail" runat="server" placeholder="Email address" CssClass="form-control"></asp:TextBox>
                             </div>
                         </div>
+                    <div class="form-group">
+                            <asp:Label ID="lbltypeofsuite" runat="server" Text="Type of suite" CssClass="col-lg-2 control-label"></asp:Label>
+                            <div class="col-lg-10">
+                                 <asp:DropDownList ID="DropDownList1" runat="server" CssClass="form-control">
+                                     <asp:ListItem>Presidential suite</asp:ListItem>
+                                     <asp:ListItem>Luxury suite</asp:ListItem>
+                                     <asp:ListItem>Standard suite</asp:ListItem>
+                                 </asp:DropDownList>
+                            </div>
+                        </div>
+                    <div class="form-group">
+                    <asp:Label ID="Label1" runat="server" Text="Number of occupants" CssClass="col-lg-2 control-label"></asp:Label>
+                    <div class="col-lg-10">
+                        <asp:TextBox ID="txtOccupants" runat="server" placeholder="Number of occupants" CssClass="form-control" required="required"></asp:TextBox>
+                    </div>
+                </div>
                 <div class="form-group">
                     <asp:Label ID="Label5" runat="server" Text="Check-in date" CssClass="col-lg-2 control-label"></asp:Label>
                     <div class="col-lg-10">
-                        <asp:TextBox ID="date_timepicker_start" runat="server" placeholder="Check-in date" CssClass="form-control"></asp:TextBox> 
+                        <asp:TextBox ID="date_timepicker_start" runat="server" placeholder="Check-in date" CssClass="form-control" required="required"></asp:TextBox> 
                     </div>
                 </div>
                 <div class="form-group">
                     <asp:Label ID="Label6" runat="server" Text="Check-out date" CssClass="col-lg-2 control-label"></asp:Label>
                 <div class="col-lg-10">
-                    <asp:TextBox ID="date_timepicker_end" runat="server" placeholder="Check-out date" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="date_timepicker_end" runat="server" placeholder="Check-out date" CssClass="form-control" required="required"></asp:TextBox>
                 </div>
             </div>
                     <asp:Button ID="Button1" runat="server" Text="Button" data-toggle="modal" data-target="#myModal" OnClientClick="return false"/>
@@ -144,33 +159,39 @@
         <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Book this room now!</h4>
+          <h4 class="modal-title">Pay here!</h4>
         </div>
         <div class="modal-body">
-            <div class="form-horizontal">
+
+            <div class="form-inline">
                 <div class="form-group">
-                            <asp:Label ID="Label2" runat="server" Text="Amount to pay" CssClass="col-lg-2 control-label"></asp:Label>
-                            <div class="col-lg-10">
-                                 <asp:TextBox ID="txtAmount" runat="server" placeholder="1.00" CssClass="form-control"></asp:TextBox>
-                            </div>
+                        <div class="input-group">
+                            <div class="input-group-addon">$</div>
+                    <asp:TextBox ID="txtAmount" runat="server" placeholder="Amount" CssClass="form-control"></asp:TextBox>
+                        <div class="input-group-addon">.00</div>
                         </div>
+               </div>
+            
                 <div class="form-group">
-                            <asp:Label ID="Label3" runat="server" Text="Confirm Amount to pay" CssClass="col-lg-2 control-label"></asp:Label>
-                            <div class="col-lg-10">
-                                 <asp:TextBox ID="txtAmount2" runat="server" placeholder="1.00" CssClass="form-control"></asp:TextBox>
-                            </div>
+                    <label class="sr-only">Amount (in MYR)</label>
+                        <div class="input-group">
+                            <div class="input-group-addon">$</div>
+                    <asp:TextBox ID="txtConfirmAmount" runat="server" placeholder="Confirm Amount" CssClass="form-control"></asp:TextBox>
+                        <div class="input-group-addon">.00</div>
                         </div>
+               </div>
+               <asp:CompareValidator runat="server" ID="Comp1" ControlToValidate="txtAmount" ControlToCompare="txtConfirmAmount" Text="Password mismatch" Font-Size="11px" ForeColor="Red"  />
+            </div>
                 </div>
         </div>
 
         <div class="modal-footer">
-            <asp:Button ID="Button2" runat="server" Text="Submit" cssClass="btn btn-default"/>
+            <asp:Button ID="btnPay" runat="server" Text="Submit" cssClass="btn btn-default"/>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
       
     </div>
-  </div>
     </form>
 </body>
 </html>

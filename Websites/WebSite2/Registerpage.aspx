@@ -64,38 +64,37 @@
                         <div class="form-group">
                             <asp:Label ID="lblEmail" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtEmail" runat="server" placeholder="Email" CssClass="form-control" required="required"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
                             <asp:Label ID="lblPassword" runat="server" Text="Password" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" CssClass="form-control"
-                                    TextMode="Password"></asp:TextBox>
+                                <asp:TextBox ID="txtPassword" runat="server" placeholder="Password" CssClass="form-control" TextMode="Password" required="required"></asp:TextBox>
                             </div>
                         </div>
                          <div class="form-group">
                             <asp:Label ID="lblName" runat="server" Text="Name" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="txtName" runat="server" placeholder="Name" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtName" runat="server" placeholder="Name" CssClass="form-control" required="required"></asp:TextBox>
                             </div>
                         </div>
                          <div class="form-group">
                             <asp:Label ID="lblICnumber" runat="server" Text="I.C Number" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="txtICnumber" runat="server" placeholder="I.C Number" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtICnumber" runat="server" placeholder="I.C Number" CssClass="form-control" required="required"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
                             <asp:Label ID="lblAddress" runat="server" Text="Address" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtAddress" runat="server" TextMode="MultiLine" Rows="3" CssClass="form-control" required="required"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
                             <asp:Label ID="Label1" runat="server" Text="Contact Number" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                <asp:TextBox ID="txtContact" runat="server" placeholder="011-1234567" CssClass="form-control"></asp:TextBox>
+                                <asp:TextBox ID="txtContact" runat="server" placeholder="011-1234567" CssClass="form-control" required="required"></asp:TextBox>
                             </div>
                         </div>
                         <div class="form-group">
@@ -113,6 +112,8 @@
                         </div>
                         <div class="form-group">
                             <div class="col-lg-10 col-lg-offset-2">
+                                <asp:CompareValidator runat="server" Operator="DataTypeCheck" Type="Integer" ControlToValidate="txtICnumber" ErrorMessage="Enter a valid I.C number" />
+                                <asp:RangeValidator runat="server" Type="Integer" MinimumValue="10" MaximumValue="11" ControlToValidate="ValueTextBox" ErrorMessage="Your I.C number must within 10-11 numbers" />
                                 <asp:Button ID="btnSubmit" runat="server" CssClass="btn btn-success" Text="Submit" />
                                   <asp:Button ID="btnCancel" runat="server" CssClass="btn btn-danger" Text="Cancel" />                              
                             </div>

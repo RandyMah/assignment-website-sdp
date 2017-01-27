@@ -15,28 +15,7 @@
      <link href="css/jquery.datetimepicker.css" rel="stylesheet" />
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.datetimepicker.full.min.js"></script>
-        <script  type ="text/javascript">
-            jQuery(function () {
-                jQuery('#date_timepicker_start').datetimepicker({
-                    format: 'Y/m/d',
-                    onShow: function (ct) {
-                        this.setOptions({
-                            maxDate: jQuery('#date_timepicker_end').val() ? jQuery('#date_timepicker_end').val() : false
-                        })
-                    },
-                    timepicker: false
-                });
-                jQuery('#date_timepicker_end').datetimepicker({
-                    format: 'Y/m/d',
-                    onShow: function (ct) {
-                        this.setOptions({
-                            minDate: jQuery('#date_timepicker_start').val() ? jQuery('#date_timepicker_start').val() : false
-                        })
-                    },
-                    timepicker: false
-                });
-            });
-        </script>
+        
     <title>Presidential suite</title>
 </head>
 <body>
@@ -67,28 +46,7 @@
             </div>
         </div>
     </nav>
-        <div class="container-figure">
-             <div class="container">
-                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-    <div class="hovereffect">
-        <img class="img-responsive" src="images/hotel1.jpg"/>
-        <div class="overlay">
-           <h2>Presidential suite</h2>
-           <p class="info">asdfasdfsadf</p>
-        </div>
-    </div>
-</div>
-</div>
-            
-        <div class="container">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <a class ="btn btn-danger col-lg-12 shake-little centered" data-toggle="modal" data-target="#myModal">BOOK NOW!!</a>
-                <asp:Button ID="Button1" runat="server" Text="Button" data-toggle="modal" data-target="#myModal" OnClientClick="return false"/>
-            </div>
-        </div>
-</div>
-
-
+       
 
         <div class="footer">
             <div class="container">
