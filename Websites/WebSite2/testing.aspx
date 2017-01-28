@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="testing.aspx.vb" Inherits="testing" %>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="testing.aspx.vb" Inherits="testing"%>
 
 <!DOCTYPE html>
 
@@ -16,29 +16,6 @@
     <link href="css/jquery.datetimepicker.css" rel="stylesheet" />
     <script src="/js/jquery.js"></script>
     <script src="/js/jquery.datetimepicker.full.min.js"></script>
-        <script  type ="text/javascript">
-            jQuery(function () {
-                jQuery('#date_timepicker_start').datetimepicker({
-                    format: 'Y/m/d',
-                    onShow: function (ct) {
-                        this.setOptions({
-                            maxDate: jQuery('#date_timepicker_end').val() ? jQuery('#date_timepicker_end').val() : false
-                        })
-                    },
-                    timepicker: false
-                });
-                jQuery('#date_timepicker_end').datetimepicker({
-                    format: 'Y/m/d',
-                    onShow: function (ct) {
-                        this.setOptions({
-                            minDate: jQuery('#date_timepicker_start').val() ? jQuery('#date_timepicker_start').val() : false
-                        })
-                    },
-                    timepicker: false
-                });
-            });
-        </script>
-    
 
   <title>Book Here</title>
 </head>
@@ -78,8 +55,7 @@
                 <div class="form-group">
                             <asp:Label ID="Label4" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                 <asp:TextBox ID="TxtEmail" runat="server" placeholder="Email address" CssClass="form-control"></asp:TextBox>
-                                <asp:RequiredFieldValidator id="RequiredFieldValidator1" runat="server" ControlToValidate="txtEmail" ErrorMessage="Email is a required field." ForeColor="Red"></asp:RequiredFieldValidator>
+                                 <asp:TextBox ID="TxtEmail" runat="server" placeholder="Email address" CssClass="form-control" required="required"></asp:TextBox>
                             </div>
                         </div>
                     <div class="form-group">
@@ -95,7 +71,7 @@
                     <div class="form-group">
                     <asp:Label ID="Label1" runat="server" Text="Number of occupants" CssClass="col-lg-2 control-label"></asp:Label>
                     <div class="col-lg-10">
-                        <asp:TextBox ID="txtOccupants" runat="server" placeholder="Number of occupants" CssClass="form-control" required="required"></asp:TextBox>
+                        <asp:TextBox ID="txtOccupants" runat="server" placeholder="Number of occupants" CssClass="form-control" required="required" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32);"></asp:TextBox>
                     </div>
                 </div>
                 <div class="form-group">
@@ -168,7 +144,7 @@
                 <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon">$</div>
-                    <asp:TextBox ID="txtAmount" runat="server" placeholder="Amount" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtAmount" runat="server" placeholder="Amount" CssClass="form-control" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32);"></asp:TextBox>
                         <div class="input-group-addon">.00</div>
                         </div>
                </div>
@@ -177,11 +153,11 @@
                     <label class="sr-only">Amount (in MYR)</label>
                         <div class="input-group">
                             <div class="input-group-addon">$</div>
-                    <asp:TextBox ID="txtConfirmAmount" runat="server" placeholder="Confirm Amount" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtConfirmAmount" runat="server" placeholder="Confirm Amount" CssClass="form-control" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32);"></asp:TextBox>
                         <div class="input-group-addon">.00</div>
-                        </div>
+                        </div> 
                </div>
-               <asp:CompareValidator runat="server" ID="Comp1" ControlToValidate="txtAmount" ControlToCompare="txtConfirmAmount" Text="Password mismatch" Font-Size="11px" ForeColor="Red"  />
+              
             </div>
                 </div>
         </div>
@@ -194,5 +170,27 @@
       
     </div>
     </form>
+       <script  type ="text/javascript">
+            jQuery(function () {
+                jQuery('#date_timepicker_start').datetimepicker({
+                    format: 'Y/m/d',
+                    onShow: function (ct) {
+                        this.setOptions({
+                            maxDate: jQuery('#date_timepicker_end').val() ? jQuery('#date_timepicker_end').val() : false
+                        })
+                    },
+                    timepicker: false
+                });
+                jQuery('#date_timepicker_end').datetimepicker({
+                    format: 'Y/m/d',
+                    onShow: function (ct) {
+                        this.setOptions({
+                            minDate: jQuery('#date_timepicker_start').val() ? jQuery('#date_timepicker_start').val() : false
+                        })
+                    },
+                    timepicker: false
+                });
+            });
+        </script>
 </body>
 </html>

@@ -18,12 +18,6 @@ Partial Class testing
         con.ConnectionString = dbProvider & dbSource
         con.Open()
 
-
-
-        sql = "SELECT * FROM Reservation"
-        da = New OleDb.OleDbDataAdapter(sql, con)
-        da.Fill(ds, "Reservation")
-
         maxRow = ds.Tables("Reservation").Rows.Count
 
 
