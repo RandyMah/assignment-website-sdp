@@ -26,7 +26,7 @@ Partial Class testing
 
         dsNewRow = ds.Tables("Reservation").NewRow()
 
-        dsNewRow.Item("Email") = TxtEmail.Text
+        dsNewRow.Item("Email") = txtICnumber.Text
         dsNewRow.Item("TypeofSuite") = DropDownList1.Text
         dsNewRow.Item("Occupancy") = txtOccupants.Text
         dsNewRow.Item("CheckIn") = date_timepicker_start.Text

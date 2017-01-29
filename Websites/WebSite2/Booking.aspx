@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="testing.aspx.vb" Inherits="testing"%>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="Booking.aspx.vb" Inherits="testing"%>
 
 <!DOCTYPE html>
 
@@ -10,7 +10,6 @@
     <link href="css/mainContent.css" rel="stylesheet" />
     <link href="css/font-awesome.css" rel="stylesheet" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link href="css/jquery.datetimepicker.css" rel="stylesheet" />
@@ -53,9 +52,9 @@
             <div class="col-lg-12">
                 <div class="form-horizontal">
                 <div class="form-group">
-                            <asp:Label ID="Label4" runat="server" Text="Email" CssClass="col-lg-2 control-label"></asp:Label>
+                            <asp:Label ID="Label4" runat="server" Text="I.C Number" CssClass="col-lg-2 control-label"></asp:Label>
                             <div class="col-lg-10">
-                                 <asp:TextBox ID="TxtEmail" runat="server" placeholder="Email address" CssClass="form-control" required="required"></asp:TextBox>
+                                 <asp:TextBox ID="txtICnumber" runat="server" placeholder="I.C Number" CssClass="form-control" required="required"></asp:TextBox>
                             </div>
                         </div>
                     <div class="form-group">

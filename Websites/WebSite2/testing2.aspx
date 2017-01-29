@@ -1,4 +1,4 @@
-﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="testing.aspx.vb" Inherits="testing"%>
+﻿<%@ Page Language="VB" AutoEventWireup="false" CodeFile="testing2.aspx.vb" Inherits="testing2" %>
 
 <!DOCTYPE html>
 
@@ -71,7 +71,7 @@
                     <div class="form-group">
                     <asp:Label ID="Label1" runat="server" Text="Number of occupants" CssClass="col-lg-2 control-label"></asp:Label>
                     <div class="col-lg-10">
-                        <asp:TextBox ID="txtOccupants" runat="server" placeholder="Number of occupants" CssClass="form-control" required="required"></asp:TextBox>
+                        <asp:TextBox ID="txtOccupants" runat="server" placeholder="Number of occupants" CssClass="form-control" required="required" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32);"></asp:TextBox>
                     </div>
                 </div>
                 <div class="form-group">
@@ -144,7 +144,7 @@
                 <div class="form-group">
                         <div class="input-group">
                             <div class="input-group-addon">$</div>
-                    <asp:TextBox ID="txtAmount" runat="server" placeholder="Amount" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtAmount" runat="server" placeholder="Amount" CssClass="form-control" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32);"></asp:TextBox>
                         <div class="input-group-addon">.00</div>
                         </div>
                </div>
@@ -153,7 +153,7 @@
                     <label class="sr-only">Amount (in MYR)</label>
                         <div class="input-group">
                             <div class="input-group-addon">$</div>
-                    <asp:TextBox ID="txtConfirmAmount" runat="server" placeholder="Confirm Amount" CssClass="form-control"></asp:TextBox>
+                    <asp:TextBox ID="txtConfirmAmount" runat="server" placeholder="Confirm Amount" CssClass="form-control" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32);"></asp:TextBox>
                         <div class="input-group-addon">.00</div>
                         </div> 
                </div>
