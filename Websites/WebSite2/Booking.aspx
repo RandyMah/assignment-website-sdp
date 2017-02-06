@@ -70,7 +70,7 @@
                     <div class="form-group">
                     <asp:Label ID="Label1" runat="server" Text="Number of occupants" CssClass="col-lg-2 control-label"></asp:Label>
                     <div class="col-lg-10">
-                        <asp:TextBox ID="txtOccupants" runat="server" placeholder="Number of occupants" CssClass="form-control" required="required" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32);"></asp:TextBox>
+                        <asp:TextBox ID="txtOccupants" runat="server" placeholder="Number of occupants" CssClass="form-control" required="required" onkeydown = "return (!(event.keyCode>=65) && event.keyCode!=32 && !(event.shiftKey && (event.keyCode >= 48 && event.keyCode <= 57)));"></asp:TextBox>
                     </div>
                 </div>
                 <div class="form-group">
